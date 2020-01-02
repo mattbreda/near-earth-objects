@@ -1,0 +1,12 @@
+.BrightnessContainer {
+    height: calc(100% - 60px);
+    margin-top: 40px;
+
+    &--asteroids {
+        height: calc(100% - 120px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 57px;
+    }
+}

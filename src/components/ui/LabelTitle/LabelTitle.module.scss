@@ -1,0 +1,15 @@
+.LabelTitle {
+  color: #ffffff;
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &--unit {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+}
