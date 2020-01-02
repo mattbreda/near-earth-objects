@@ -1,0 +1,51 @@
+.Asteroid {
+  box-sizing: border-box;
+  border: 0.5px solid #2af598;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  
+  &.isActive {
+    background: radial-gradient(
+      circle,
+      rgba(42, 245, 152, 0) 0%,
+      rgba(42, 245, 152, 0.03) 48.36%,
+      rgba(42, 245, 152, 0.06) 100%
+    );
+    box-shadow: 0 0 8px 0 rgba(42, 245, 152, 0.6);
+    transform: translate(-50%, -50%);
+  }
+
+  &__Right-legend {
+    transform: translate(-50%, -50%);
+  }
+
+  &-center{
+    box-sizing: border-box;
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    border: 1px solid #2af598;
+    background-color: #2af598;
+    box-shadow: 0 0 8px 0 rgba(42, 245, 152, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .LegendLabel {
+    color: #ffffff;
+    font-family: Avenir;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    left: 14px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+}
