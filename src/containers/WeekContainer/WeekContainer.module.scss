@@ -1,0 +1,23 @@
+.WeekContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  &__Title {
+    color: #ffffff;
+    font-family: Avenir;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+  }
+
+  &__DayList {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 270px;
+  }
+}

@@ -1,0 +1,1 @@
+export const nasaApiKey = 'oJeqTMxmt7fuxH4vwhVYETqZkssTE7XZ7Yd5Dmiu';
