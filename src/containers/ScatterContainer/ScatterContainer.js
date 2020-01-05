@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { nasaResponse } from '../../mocks/nasa-api';
 import classes from './ScatterContainer.module.scss';
 import Asteroid from '../../components/ui/Asteroid/Asteroid';
 
@@ -8,7 +7,7 @@ const calculateRelativeScale = (unscaledNum, minAllowed, maxAllowed, min, max) =
 
 class ScatterContainer extends Component {
   render () {
-    const data = nasaResponse.near_earth_objects['2015-09-08'];
+    const data = this.props.dailyData;
     let maxDimension = (data[0].estimated_diameter.kilometers.estimated_diameter_min + data[0].estimated_diameter.kilometers.estimated_diameter_max)/2;
     let minDimension = (data[0].estimated_diameter.kilometers.estimated_diameter_min + data[0].estimated_diameter.kilometers.estimated_diameter_max)/2;
     let minSpeed = Number(data[0].close_approach_data[0].relative_velocity.kilometers_per_second); 
@@ -27,14 +26,23 @@ class ScatterContainer extends Component {
       if ( maxDistance < singleAsteroidData.close_approach_data[0].miss_distance.astronomical) { maxDistance = Number(singleAsteroidData.close_approach_data[0].miss_distance.astronomical)}
       if ( minDistance > singleAsteroidData.close_approach_data[0].miss_distance.astronomical) { minDistance = Number(singleAsteroidData.close_approach_data[0].miss_distance.astronomical)}
     }) 
-    const asteroidsToRender = nasaResponse.near_earth_objects['2015-09-08']
+    const asteroidsToRender = data
       .map( singleAsteroid => {
         let averageDiameter = (singleAsteroid.estimated_diameter.kilometers.estimated_diameter_min + singleAsteroid.estimated_diameter.kilometers.estimated_diameter_max)/2;
         let asteroidRaiud = calculateRelativeScale(averageDiameter,scaleMin,scaleMax,minDimension,maxDimension)
         let asteroidSpeed = calculateRelativeScale(singleAsteroid.close_approach_data[0].relative_velocity.kilometers_per_second, 0, 100,minSpeed,maxSpeed)
         let asteroidDistance = calculateRelativeScale(singleAsteroid.close_approach_data[0].miss_distance.astronomical,0,100,minDistance,maxDistance)
         return (
-          <Asteroid isLegend={false} key={singleAsteroid.id} radius={asteroidRaiud} left={asteroidSpeed+'%'} top={asteroidDistance+'%'}/>
+          <Asteroid 
+            isLegend={false} 
+            key={singleAsteroid.id} 
+            radius={asteroidRaiud} 
+            left={asteroidSpeed} 
+            top={asteroidDistance}
+            asteroidData={singleAsteroid}
+            asteroidDiameter={averageDiameter}
+            asteroidSpeed={asteroidSpeed}
+            asteroidDistance={asteroidDistance}/>
         )
       })
 
