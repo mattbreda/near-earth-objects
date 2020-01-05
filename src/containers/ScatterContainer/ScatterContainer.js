@@ -19,7 +19,7 @@ class ScatterContainer extends Component {
     let scaleMin = 15;
     let scaleMax= 100;
 
-    data.map( singleAsteroidData => {
+    data.forEach( singleAsteroidData => {
       let averageDiameter = (singleAsteroidData.estimated_diameter.kilometers.estimated_diameter_min + singleAsteroidData.estimated_diameter.kilometers.estimated_diameter_max)/2;
       if (maxDimension < averageDiameter) { maxDimension = averageDiameter }
       if (minDimension > averageDiameter) { minDimension = averageDiameter }
