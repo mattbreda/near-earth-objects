@@ -5,19 +5,19 @@
   height: 100vh;
   padding: 45px;
 
-  &-main {
+  &__main {
     width: 88%;
     display: flex;
     flex-direction: column;
   }
 
-  &-side {
+  &__side {
     border-left: 0.25px solid #FFFFFF;;
     padding-left: 45px;
     width: 22%;
   }
 
-  &-title {
+  &__title {
     color: #FFFFFF;	
     font-family: Avenir;	
     font-size: 20px;	
@@ -26,7 +26,7 @@
     text-decoration: underline;
   }
 
-  &-heading {
+  &__heading {
     align-items: baseline;
     display: flex;
     flex-direction: row;
@@ -35,7 +35,7 @@
     width: 100%;
   }
 
-  &--loaderContainer {
+  &__loaderContainer {
     height: 100%;
     width: 100%;
     display: flex;

@@ -5,13 +5,13 @@
   margin-top: 30px;
   justify-content: space-around;
 
-  &-element {
+  &__element {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  &-description {
+  &__description {
     color: #ffffff;
     font-family: Avenir;
     font-size: 13px;
@@ -20,14 +20,14 @@
     margin-left: 13px;
   }
 
-  &-square {
+  &__square {
     box-sizing: border-box;
     height: 11px;
     width: 11px;
     border: 1px solid #ffffff;
     transform: rotate(-45deg);
 
-    &__full {
+    &--full {
       background-color: #d8d8d8;
     }
   }

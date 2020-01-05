@@ -1,7 +1,7 @@
 .AsteroidMagnitude {
   display: flex;
   flex-direction: row;
-  &--asteroid {
+  &__asteroid {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -20,12 +20,12 @@
     box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
   }
 
-  &--magnitude {
+  &__magnitude {
     background-color: #ffffff;
     position: absolute;
   }
 
-  &--center {
+  &__center {
     box-sizing: border-box;
     display: block;
     height: 2px;
@@ -39,13 +39,13 @@
     z-index: 10;
   }
 
-  &--info {
+  &__info {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
   }
 
-  &--data {
+  &__data {
     color: #ffffff;
     font-family: Avenir;
     font-size: 13px;

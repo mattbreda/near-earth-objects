@@ -13,7 +13,7 @@ const BrightnessContainer = (props) => {
     <div className={classes.BrightnessContainer}>
       <LabelTitle label={'Magnitude'} labelUnit={'H'} />
       <BrightnessLegend />
-      <div className={classes['BrightnessContainer--asteroids']}>
+      <div className={classes['BrightnessContainer__asteroids']}>
         {asteroidToRender}
       </div>
     </div>

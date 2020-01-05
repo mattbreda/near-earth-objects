@@ -43,8 +43,8 @@ class WeekContainer extends Component {
 
     return (
       <div className={classes.WeekContainer}>
-        <h3 className={classes['WeekContainer-Title']}>Select one day to update the chart:</h3>
-        <div className={classes['WeekContainer-DayList']}>
+        <h3 className={classes['WeekContainer__Title']}>Select one day to update the chart:</h3>
+        <div className={classes['WeekContainer__DayList']}>
           {week}
         </div>
       </div>

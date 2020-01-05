@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-top: 40px;
 
-  &-Title {
+  &__Title {
     color: #ffffff;
     font-family: Avenir;
     font-size: 13px;
@@ -12,7 +12,7 @@
     line-height: 18px;
   }
 
-  &-DayList {
+  &__DayList {
     align-items: center;
     display: flex;
     flex-direction: row;

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import classes from './ScatterContainer.module.scss';
 import Asteroid from '../../components/ui/Asteroid/Asteroid';
+import { ReactComponent as ArrowUp } from '../../assets/up-arrow.svg';
+import { ReactComponent as ArrowRigth } from '../../assets/right-arrow.svg';
 
 const calculateRelativeScale = (unscaledNum, minAllowed, maxAllowed, min, max) => ((maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed)
 
@@ -51,8 +53,8 @@ class ScatterContainer extends Component {
         <hr className={classes.BreakingLine}/>
         <hr className={classes.BreakingLine}/>
         <hr className={classes.BreakingLine}/>
-        <span className={[classes.Label, classes['Label__YAxis']].join(' ')}>Distance{' '}<span className={classes['Label-unit']}>(au)</span></span>
-        <span className={[classes.Label, classes['Label__XAxis']].join(' ')}>Velocity{' '}<span className={classes['Label-unit']}>(km/s)</span></span>
+        <span className={[classes.Label, classes['Label--YAxis']].join(' ')}><span className={classes.IconContainer}><ArrowUp /></span> Distance{' '}<span className={classes['Label__unit']}>(au)</span></span>
+        <span className={[classes.Label, classes['Label--XAxis']].join(' ')}><span className={classes.IconContainer}><ArrowRigth /></span>Velocity{' '}<span className={classes['Label__unit']}>(km/s)</span></span>
         <div className={classes['ScatterContainer__AsteroidContainer']}>
          {asteroidsToRender}
           </div>

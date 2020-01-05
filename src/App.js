@@ -34,8 +34,8 @@ class App extends Component {
   }
 
   render() {
-    let main = <div className={classes['App--loaderContainer']}><Loader /></div>;
-    let side = <div className={classes['App--loaderContainer']}><Loader /></div>;
+    let main = <div className={classes['App__loaderContainer']}><Loader /></div>;
+    let side = <div className={classes['App__loaderContainer']}><Loader /></div>;
     if(this.state.asteroidData && this.state.selectedDate) {
       main = <ScatterContainer dailyData={this.state.asteroidData[this.props.selectedDate]}/>
     }
@@ -45,16 +45,16 @@ class App extends Component {
 
     return (
       <div className={classes.App}>
-        <div className={classes['App-main']}>
-          <h1 className={classes['App-title']}>Asteroids of the day</h1>
-          <div className={classes['App-heading']}>
+        <div className={classes['App__main']}>
+          <h1 className={classes['App__title']}>Asteroids of the day</h1>
+          <div className={classes['App__heading']}>
             <WeekContainer />
             <AsteroidLegend />
           </div>
           {main}
         </div>
-        <div className={classes['App-side']}>
-          <h1 className={classes['App-title']}>Brightest of the week</h1>
+        <div className={classes['App__side']}>
+          <h1 className={classes['App__title']}>Brightest of the week</h1>
           {side}
         </div>
       </div>

@@ -36,18 +36,27 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
 
-  &__XAxis {
+  &--XAxis {
     top: calc(100% + 10px);
   }
 
-  &__YAxis {
+  &--YAxis {
     bottom: 10px;
   }
 
-  &-unit {
+  &__unit {
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 0.5px;
     text-transform: lowercase;
   }
+}
+
+.IconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
 }

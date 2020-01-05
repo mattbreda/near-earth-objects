@@ -16,11 +16,11 @@
     transform: translate(-50%, -50%);
   }
 
-  &__Right-legend {
+  &--Right-legend {
     transform: translate(-50%, -50%);
   }
 
-  &-center {
+  &__center {
     box-sizing: border-box;
     display: block;
     height: 3px;
@@ -35,7 +35,7 @@
     transform: translate3d(-50%, -50%, 0);
   }
 
-  &--info {
+  &__info {
     display: block;
     flex-direction: column;
     opacity: 0;
@@ -53,7 +53,7 @@
     transition: opacity 0.5s;
   }
 
-  &--single-info {
+  &__single-info {
     color: #ffffff;
     font-family: Avenir;
     font-size: 12px;
@@ -75,7 +75,7 @@
     transform: translate(0, -50%);
   }
 
-  &:hover &--info {
+  &:hover &__info {
     opacity: 1;
   }
 }
