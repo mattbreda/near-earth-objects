@@ -17,7 +17,8 @@ class App extends Component {
   state = {
     isDataLoading: true,
     asteroidData: null,
-    selectedDate:  this.props.selectedDate
+    selectedDate: this.props.selectedDate,
+    error: false
   }
 
   componentDidMount() {
@@ -28,19 +29,28 @@ class App extends Component {
         const data = res.data.near_earth_objects;
         this.setState({
           asteroidData: data,
-          isDataLoading: false, 
-          });
+          isDataLoading: false,
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState({ error: true })
       })
   }
 
   render() {
+    const error = <div className={classes['App__loaderContainer']}><span className={classes['App__error']}>Sorry, something went wrong!<br /> Try to refresh the page, and if the problem persist, try again later.</span></div>;
     let main = <div className={classes['App__loaderContainer']}><Loader /></div>;
     let side = <div className={classes['App__loaderContainer']}><Loader /></div>;
-    if(this.state.asteroidData && this.state.selectedDate) {
-      main = <ScatterContainer dailyData={this.state.asteroidData[this.props.selectedDate]}/>
+    let week = <div></div>
+    if (this.state.asteroidData && this.state.selectedDate) {
+      main = <ScatterContainer dailyData={this.state.asteroidData[this.props.selectedDate]} />
+      week = <WeekContainer />
+    } else if (!this.state.asteroidData && this.state.error) {
+      main = error;
     }
-    if(this.state.asteroidData) {
-      side = <BrightnessContainer fiveMostBright={sortByMagnitude(this.state.asteroidData, 5)}/>
+    if (this.state.asteroidData) {
+      side = <BrightnessContainer fiveMostBright={sortByMagnitude(this.state.asteroidData, 5)} />
     }
 
     return (
@@ -48,7 +58,7 @@ class App extends Component {
         <div className={classes['App__main']}>
           <h1 className={classes['App__title']}>Asteroids of the day</h1>
           <div className={classes['App__heading']}>
-            <WeekContainer />
+            {week}
             <AsteroidLegend />
           </div>
           {main}

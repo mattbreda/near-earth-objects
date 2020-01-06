@@ -1,6 +1,6 @@
 export const sortByMagnitude = (data, numberOfElements) => {
   const arrayToSort = Object.values(data).flat();
-  const compareAscending = (a,b) => {
+  const compareAscending = (a, b) => {
     const magnitudeA = a.absolute_magnitude_h;
     const magnitudeB = b.absolute_magnitude_h;
 
@@ -12,13 +12,13 @@ export const sortByMagnitude = (data, numberOfElements) => {
     }
     return comparison;
   }
-  return arrayToSort.sort(compareAscending).slice(0,numberOfElements)
+  return arrayToSort.sort(compareAscending).slice(0, numberOfElements)
 }
 
 export const uniformName = (name) => {
   let nameToUniform = name.split(' ');
   if (nameToUniform.length === 3) {
-    nameToUniform.splice(0,1);
+    nameToUniform.splice(0, 1);
   }
   return nameToUniform.join(' ')
 }

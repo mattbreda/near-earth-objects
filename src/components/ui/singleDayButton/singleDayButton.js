@@ -6,10 +6,10 @@ const SingleDayButton = (props) => {
   const day = props.day;
   const buttonClass = props.isSelected ? [classes.DayButton, classes['DayButton--selected']].join(' ') : classes.DayButton;
   return (
-    <div 
+    <div
       className={buttonClass}
       onClick={() => select(day)}
-      >{props.dayLabel}</div>
+    >{props.dayLabel}</div>
   )
 }
 
