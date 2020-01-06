@@ -4,8 +4,7 @@ import classes from './ScatterContainer.module.scss';
 import Asteroid from '../../components/ui/Asteroid/Asteroid';
 import { ReactComponent as ArrowUp } from '../../assets/up-arrow.svg';
 import { ReactComponent as ArrowRigth } from '../../assets/right-arrow.svg';
-
-const calculateRelativeScale = (unscaledNum, minAllowed, maxAllowed, min, max) => ((maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed)
+import {calculateRelativeScale} from '../../utils/functions';
 
 class ScatterContainer extends Component {
   render () {
