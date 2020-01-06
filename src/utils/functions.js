@@ -22,3 +22,5 @@ export const uniformName = (name) => {
   }
   return nameToUniform.join(' ')
 }
+
+export const calculateRelativeScale = (unscaledNum, minAllowed, maxAllowed, min, max) => ((maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed)

@@ -1,7 +1,9 @@
 import React from 'react';
 
 import classes from './AsteroidMagnitude.module.scss'
-import {uniformName} from '../../../utils/functions';
+import {uniformName,calculateRelativeScale} from '../../../utils/functions';
+
+
 
 
 const AsteroidMagnitude = props => {
@@ -14,8 +16,8 @@ const AsteroidMagnitude = props => {
         <span 
           className={classes['AsteroidMagnitude__magnitude']}
           style={{
-            height: [magnitude,'%'].join('').toString(),
-            width: [magnitude,'%'].join('').toString()}}></span>
+            height: [calculateRelativeScale(magnitude,0,100,props.minBr,props.maxBr),'%'].join('').toString(),
+            width: [calculateRelativeScale(magnitude,0,100,props.minBr,props.maxBr),'%'].join('').toString()}}></span>
             <span className={classes['AsteroidMagnitude__center']}>
             </span>
       </span>
