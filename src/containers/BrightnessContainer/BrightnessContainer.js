@@ -8,9 +8,8 @@ import classes from './BrightnessContainer.module.scss';
 const BrightnessContainer = (props) => {
   let maxBright = props.fiveMostBright[props.fiveMostBright.length - 1].absolute_magnitude_h;
   let minBrigth = props.fiveMostBright[0].absolute_magnitude_h;
-  console.log(minBrigth, maxBright)
   const asteroidToRender = props.fiveMostBright.reverse().map(asteroid => {
-    return  <AsteroidMagnitude asteroidData={asteroid} key={asteroid.id} minBr={minBrigth} maxBr={maxBright}/>
+    return <AsteroidMagnitude asteroidData={asteroid} key={asteroid.id} minBr={minBrigth} maxBr={maxBright} />
   });
   return (
     <div className={classes.BrightnessContainer}>

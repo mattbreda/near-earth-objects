@@ -1,9 +1,9 @@
 .AsteroidLegend {
-    height: 75px;
-    margin-right: 100px;
-    padding-bottom: 15px;
-    width: 140px;
-    
+  height: 75px;
+  margin-right: 100px;
+  padding-bottom: 15px;
+  width: 140px;
+
   &__title {
     color: #ffffff;
     font-family: Avenir;
@@ -14,8 +14,8 @@
   }
 
   &__container {
-      position: relative;
-      height: 100%;
-      width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 }

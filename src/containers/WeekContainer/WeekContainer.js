@@ -31,7 +31,7 @@ class WeekContainer extends Component {
         date: date
       };
       week.push(
-        <SingleDayButton 
+        <SingleDayButton
           day={day}
           dayLabel={day.name}
           isSelected={date.isSame(this.state.selectedDate, 'day')}
@@ -52,7 +52,6 @@ class WeekContainer extends Component {
   }
 }
 
- 
 const mapStateToProps = state => {
   return {
     selectedDate: state.date,
