@@ -8,7 +8,7 @@ This code challenge consists of an interface that can be used to monitorate Near
 
 | Technology | Use  |
 |---|---|
-|[React](https://reactjs.org/)|UI Library|
+|[React](https://reactjs.org/)|JavaScript library for building user interfaces|
 |[CSS Modules](https://github.com/css-modules/css-modules)|Styling (CSS in Js)|
 |[Axios](https://www.npmjs.com/package/axios)|HTTP client|
 |[Redux](https://redux.js.org/)|State Container for JS Apps|
